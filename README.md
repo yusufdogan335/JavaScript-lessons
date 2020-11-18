@@ -1,2 +1,3 @@
 # JavaScript-lessons
-My javascript work files.
+
+The notes I took while working will be in this file.
