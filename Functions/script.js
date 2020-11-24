@@ -1,4 +1,4 @@
-function yasHesapla(dogumYili) {
+/* function yasHesapla(dogumYili) {
     return 2020 - dogumYili;
 }
 
@@ -18,4 +18,28 @@ function EmekliligeKacYilKaldi(dogumYili, isim) {
 
 EmekliligeKacYilKaldi(1993);
 
+
+ */
+
+//Function Declarations
+
+/* function sum(a, b) {
+    var c = a + b;
+    return c;
+}
+
+console.log(sum(10, 20)); */
+
+//ES6 DEFAULT PARAMETERS-Function Expressions (değişkenin içine fonksiyon tanımlama)
+
+/* const sum = function (a, b) {
+    var c = a + b;
+    return c;
+} */
+
+//console.log(sum(10, 30)); 2 değerden fazla girilince diğer değerler göz ardı edilir.
+
+//Örnek Uygulama
+
+// Bankamatik Uygulaması;
 
