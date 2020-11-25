@@ -61,19 +61,25 @@ function paraCek(hesap, miktar) {
     console.log(`Merhaba ${hesap.ad}`);
 
     if (hesap.bakiye >= miktar) {
+        hesap.bakiye = hesap.bakiye - miktar;
         console.log('Paranızı alabilirisiniz.');
     } else {
         var toplam = hesap.bakiye + hesap.ekHesap;
 
         if (toplam >= miktar) {
-            if (confirm('Ek hesabınızı kullanmak ister misiniz')); {
+            if (confirm('Ek hesabınızı kullanmak ister misiniz')){ 
                 console.log('Paranızı alabilirsiniz');
-            }else {
-                console.log(`${hesap.hesapNo} nolu hesabınızda ${miktar} bulunmamaktadır`);
+                var bakiye = hesap.bakiye;
+                var ekhesap = miktar - bakiye;
+                hesap.bakiye = 0;
+                hesap.ekhesap = hesap.ekhesap - ekhesap;
+            }else{
+                console.log(`${hesap.hesapNo} nolu hesabınızda ${miktar} TL bulunmamaktadır`);
             }
         } else {
             console.log('Üzgünüz bakiye yetersiz.')
         }
     }
 }
-    paraCek(hesapB, 2000);
+paraCek(hesapB, 3000);
+paraCek(hesapB, 2000);
