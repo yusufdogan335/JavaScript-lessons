@@ -43,3 +43,37 @@ console.log(sum(10, 20)); */
 
 // Bankamatik Uygulaması;
 
+var hesapA = {
+    ad: 'Yusuf DOĞAN',
+    hesapNo: '12345678',
+    bakiye: 2000,
+    ekHesap:1000
+}
+
+var hesapB = {
+    ad: 'Merve DOĞAN',
+    hesapNo: '15485414',
+    bakiye: 3000,
+    ekHesap:2000
+}
+
+function paraCek(hesap, miktar) {
+    console.log(`Merhaba ${hesap.ad}`);
+
+    if (hesap.bakiye >= miktar) {
+        console.log('Paranızı alabilirisiniz.');
+    } else {
+        var toplam = hesap.bakiye + hesap.ekHesap;
+
+        if (toplam >= miktar) {
+            if (confirm('Ek hesabınızı kullanmak ister misiniz')); {
+                console.log('Paranızı alabilirsiniz');
+            }else {
+                console.log(`${hesap.hesapNo} nolu hesabınızda ${miktar} bulunmamaktadır`);
+            }
+        } else {
+            console.log('Üzgünüz bakiye yetersiz.')
+        }
+    }
+}
+    paraCek(hesapB, 2000);
